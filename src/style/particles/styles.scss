@@ -1,0 +1,385 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'OpenSans',sans-serif;
+  font-weight: 400;
+}
+html{
+max-width: 1440px;
+min-width: 360px;
+margin: 0 auto;
+font-size: 10px;
+}
+body{
+  width: 100%;
+}
+//HEADER------------------------------------------------------------------
+header{
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 100500;
+  div {
+    width: 80%;
+    margin: 0 auto;
+    .author {
+      font-family: 'Lobster', sans-serif;
+      color: #49cbcd;
+      font-size: 36px;
+      display: inline-block;
+      padding:25px 0 30px 0;
+      text-decoration: none;
+    }
+    nav{
+      display: inline-block;
+      float: right;
+      background-color: #ffffff;
+      ul{
+        li{
+          display: inline-block;
+          a{
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            color:#60646c;
+            padding: 40px 27px 37px 27px;
+            background-color: transparent;
+            transition: background-color 0.5s;
+          }
+          a:hover{
+            background-color: #f8f9fb;
+            border-bottom: 3px solid #49cbcd;
+            color:#49cbcd;
+          }
+        }
+      }
+    }
+  }
+}
+//EXIT header--------------------------------------------------------------
+//Main BLOCK--------------------------
+main{
+  padding-top: 100px;
+
+//BANNER BLOCK------------------------------------------
+  .h-carousel-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+  }
+  .h-carousel-items{
+    width: 10000px/1440px*100%; /* устанавливаем большую ширину для набора элементов карусели, чтобы в неё всё поместилось */
+    position: relative; /* позиционируем блок относительно основной области карусели */
+  }
+  .b-carousel-block {
+    float: left; /* выстраиваем все элементы карусели в ряд */
+    width: 1440px/10000px*100%; /* задаём ширину каждого элемента */
+    img{
+      width: 100%;
+    }
+  }
+
+  .b-carousel-button-left, .b-carousel-button-right{
+    background-color: #fefefe;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: #49cbcd;
+    position: absolute;
+    font-size: 50px;
+    cursor: pointer; /* делаем кнопкам курсор в виде "пальца" */
+    z-index: 1;
+    top:47%;
+  }
+  .icon-angle-left:before,.icon-angle-right:before{
+    margin:0;
+  }
+  .b-carousel-button-right{
+    left: 93%;
+  }
+  .b-carousel-button-left{
+    left: 3%;
+  }
+  .b-carousel-button-left:active, .b-carousel-button-right:active{
+    background-color: rgba(255, 255, 255,0.5);
+  }
+
+  .bannerText{
+    top:0;
+    position: absolute;
+    width: 1440px/10000px*100%;
+    text-align: center;
+    color: #ffffff;
+      h2{
+        font-family: "Open Sans",sans-serif;
+        font-size: 6.3rem;
+        font-weight: 600;
+        padding-top: 121px/1440px*100%;
+        text-shadow: 0 1px 1px #82aa9c;
+      }
+      p{
+        font-family: "Open Sans",sans-serif;
+        font-size: 2.3rem;
+        font-weight: 400;
+        padding-top: 15px/1440px*100%;
+        text-shadow: 0 1px 1px #82aa9c;
+      }
+      button{
+        background-color: transparent;
+        border:3px solid #ffffff;
+        font-size: 2.6rem;
+        margin-top: 56px/1440px*100%;
+        width: 22.9rem;
+        height: 6.7rem;
+        border-radius: 6px;
+        color: #ffffff;
+        outline: 0;
+        outline-offset: 0;
+      }
+    button:active{
+      box-shadow: inset 0 0 20px rgba(128, 128, 128, 1);
+      color: #636363;
+      border:2px solid #A4A4A4;
+      outline: 0;
+      outline-offset: 0;
+    }
+  }
+//EXIT BANNER -------------------------------------------------------
+
+ //TEAM BLOCK -------------------------------------------------------
+  .teamBlock{
+    text-align: center;
+    padding-top: 106px/1440px*100%;
+    margin-bottom: 100px/1440px*100%;
+        h3{
+          font-size: 4.2rem;
+          }
+      .teamFlex{
+        width: 1150px/1440px*100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        padding-top: 100px/1150px*100%;
+        article{
+          width: 20%;
+          background-color: transparent;
+          transition: background-color 0.5s;
+          a{
+            text-decoration: none;
+            position: relative;
+            img{
+              width: 80%;
+
+            }
+            h4{
+              font-size: 22px;
+              color: #4e525d;
+              padding: 55px/1150px*100%;
+            }
+            p{
+              color: #4e525d;
+              font-size: 14px;
+            }
+            .description{
+              padding-top: 15px;
+            }
+            div{
+              position: relative;
+              display: inline-block;
+              span{
+                position:absolute;
+                top: 15%;
+                left: 38%;
+                font:800 8.5rem 'Open Sans', sans-serif;
+                color: #f46d6d;
+              }
+            }
+          }
+        }
+        article:hover{
+          width: 27%;
+          border-bottom: 2px solid #49cbcd;
+          img{
+            background-color: #49cbcd;
+            border-radius: 47%;
+            box-shadow: 0 0 30px rgba(128, 128, 128, 1);
+          }
+        }
+      }
+  }
+  //EXIT TEAM ------------------------------------------
+
+
+  //Price Block-------------------------------------------
+  .plans{
+    background-color: #f1f1f1;
+
+.flex-block{ width: 1150px/1440px*100%;
+  margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 120px 0 100px 0;
+        article{
+        width:370px/1150px*100%;
+        text-align: center;
+        border: 1px solid #ecf0f1;
+        background-color: #f8f9fb;
+          h5{
+            background-color: #485460;
+            color: #ffffff;
+            padding: 19px 0;
+            font-size: 26px;
+          }
+        .price{
+          font-size: 20px;
+          color: #485460;
+          padding: 20px 0;
+          border-bottom: 1px solid #ecf0f1;
+        }
+        li{
+          list-style-type: none;
+          border-bottom: 1px solid #ecf0f1;
+          background-color: #ffffff;
+          padding: 19px 0 15px;
+          line-height: 11px;
+          color: #8c9299;
+          font-size: 14px;
+        }
+        button{
+          background-color: #788492;
+          color: #ffffff;
+          border:none;
+          border-radius: 3px;
+          width:170px/370px*100%;
+          padding: 7px 0 10px;
+          margin: 30px;
+          font: 600 17px 'Open Sans', sans-serif;
+          outline: 0;
+          outline-offset: 0;
+          cursor: pointer;
+        }
+        button:active{
+          outline: 0;
+          outline-offset: 0;
+          box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.7);
+          text-shadow: 1px 1px 2px black, 0 0 1em #ffffff;
+        }
+          button:hover{
+            background-color: #49cbcd !important;
+          }
+      }
+        }
+      }
+}
+//EXIT Price Block------------------------------------------------
+//EXIT MAIN-------------------------------------------------------
+
+//FOOTER----------------------------------------------------------
+
+footer{
+  background-image: url(../img/Layer28.png);
+  background-size: cover;
+  .wigthContentFooter{
+    width: 1150px/1440px*100%;
+    overflow: hidden;
+    margin: 0 auto;
+    h6{
+      font-size: 4.2rem;
+      color: #ffffff;
+      text-align: center;
+      padding: 7.4% 0 ;
+    }
+      form{
+        width: 50%;
+        float: right;
+        padding-bottom: 90px;
+      #name,#email{
+        width: 48%;
+        height: 45px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        }
+        #name{
+          float: left;
+        }
+        #email{
+          float: right;
+        }
+
+        #message{
+          width: 100%;
+          padding: 10px;
+          height: 180px;
+          font-size: 16px;
+          border-radius: 3px;
+        }
+        #send{
+          border: none;
+          font-size: 22px;
+          color: #ffffff;
+          background-color: #49cbcd;
+          border-radius: 3px;
+          padding: 7px 64px 13px 55px;
+          float: right;
+          margin-top: 30px;
+          outline: 0;
+          outline-offset: 0;
+        }
+        #send:active{
+          outline: 0;
+          outline-offset: 0;
+          box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.7);
+          text-shadow: 1px 1px 2px black, 0 0 1em #ffffff;
+        }
+      }
+    .BlockContent{
+      .headBlockContent{
+        font-size: 24px;
+        color: #ffffff;
+      }
+      .text{
+        font-size: 14px;
+        color: #adadad;
+        padding-bottom: 40px;
+      }
+    .media-icons{
+      font-size: 23px;
+
+      .icon-twitter{
+        color: #ffffff;
+        background-color: #3ec2f3;
+        padding: 9px 5px;
+        border-radius: 50%;
+      }
+      .icon-gplus{
+        color: #ffffff;
+        background-color: #e44c41;
+        padding: 9px 5px;
+        border-radius: 50%;
+      }
+      .icon-facebook{
+        color: #ffffff;
+        background-color: #3b5997;
+        padding: 9px 5px;
+        border-radius: 50%;
+      }
+    }
+      .info{
+        color: #a897c6;
+        font-size: 14px;
+        padding-top: 15px;
+        line-height: 25px;
+        span{
+          display: block;
+        }
+      }
+  }
+  }
+}
+
+//EXIT FOOTER-----------------------------------------------------
